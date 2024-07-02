@@ -1,0 +1,20 @@
+.novel{
+  width: 25px;
+  height: 30000px;
+  font-size: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  text-align: center;
+  writing-mode: vertical-rl;
+  vertical-align: top;
+  /* background: skyblue; */
+  white-space: nowrap;
+  font-family: serif;
+}
+
+.flexbox{
+  vertical-align: top;
+  width: 1000px;
+  height: 3350000px;
+  display:flex;
+}

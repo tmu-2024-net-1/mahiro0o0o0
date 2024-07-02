@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>変数を増減するボタン</title>
+    <style>
+        .button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .counter {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .message {
+            font-size: 18px;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="counter" id="counter">変数の値: 0</div>
+<button class="button" onclick="increase()">増やす</button>
+<button class="button" onclick="decrease()">減らす</button>
+<div class="message" id="message">変数の値が2以上です。</div>
+
+<script>
+    var counter = 0;
+
+    function increase() {
+        counter++;
+        updateCounter();
+    }
+
+    function decrease() {
+        counter--;
+        updateCounter();
+    }
+
+    function updateCounter() {
+        var message = document.getElementById('message');
+        if (counter >= 2) {
+            message.style.display = 'block';
+        } else {
+            message.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>

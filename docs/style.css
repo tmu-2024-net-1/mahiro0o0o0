@@ -12,9 +12,17 @@
   font-family: serif;
 }
 
+.novel2{
+  display: none;
+}
+
 .flexbox{
   vertical-align: top;
   width: 1000px;
   height: 3350000px;
   display:flex;
+}
+
+:root {
+  --count: 0;
 }

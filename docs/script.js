@@ -1,3 +1,31 @@
-const text = `山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。人の世を作ったものは神でもなければ鬼でもない。やはり向う三軒両隣りにちらちらするただの人である。ただの人が作った人の世が住みにくいからとて、越す国はあるまい。あれば人でなしの国へ行くばかりだ。人でなしの国は人の世よりもなお住みにくかろう。`;
+let count = 0;
 
-document.querySelector('#text').innerHTML = text.replace(/\n/g, '<br>')
+function increase() {
+  count = count + 1;
+  const message = document.querySelector("#message");
+  message.textContent = count +"冊を同時に読む";
+  updateCounter()
+}
+
+function decrease() {
+  if(count > 1){
+    count = count - 1;
+    const message = document.querySelector("#message");
+    message.textContent = count +"冊を同時に読む";
+  }
+  updateCounter()
+}
+
+function updateCounter() {
+  var message = document.getElementById('novel2');
+  if (count >= 2) {
+      message.style.display = 'block';
+  } else {
+      message.style.display = 'none';
+  }
+}
+
+const button = document.querySelector("button");
+button.addEventListener("click", createParagraph);
+
+// document.querySelector('#text').innerHTML = text.replace(/\n/g, '<br>')

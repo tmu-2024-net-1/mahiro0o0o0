@@ -1,4 +1,4 @@
-let count = 0;
+let count = 1;
 
 function increase() {
   count = count + 1;

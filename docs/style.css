@@ -2,8 +2,8 @@
   width: 25px;
   height: 30000px;
   font-size: 20px;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 300px;
+  margin-top: 200px;
   text-align: center;
   writing-mode: vertical-rl;
   vertical-align: top;
@@ -14,6 +14,14 @@
 
 .novel2{
   display: none;
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background: white;
 }
 
 .flexbox{

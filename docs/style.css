@@ -1,6 +1,6 @@
 .novel{
   width: 25px;
-  height: 3000px;
+  height: 30px;
   font-size: 20px;
   margin-left: 200px;
   margin-top: 200px;
@@ -25,19 +25,14 @@ nav{
   top: 0;
   left: 0;
   padding: 20px;
-  width: 100%;
   background: white;
 }
 
 .flexbox{
   vertical-align: top;
   width: 1000px;
-  height: 30000px;
   display:flex;
+  margin-top: 50px;
   margin-right: auto;
   margin-left: auto;
-}
-
-:root {
-  --count: 0;
 }

@@ -18,6 +18,7 @@ function decrease() {
     const message = document.querySelector("#message");
     message.textContent = count +"冊を同時に読む";
     document.getElementById('scrollAmount').textContent = `所持read: ${parseInt(read)}`;
+    document.getElementById('pay').textContent = `本を増やす　消費read: ${Math.pow(10, count)}`;
   }
   updateCounter()
 }

@@ -7,7 +7,7 @@ function increase() {
     const message = document.querySelector("#message");
     message.textContent = count +"冊を同時に読む";
     document.getElementById('scrollAmount').textContent = `所持read: ${parseInt(read)}`;
-    document.getElementById('pay').textContent = `本を増やす　消費read: ${Math.pow(10, count)}`;
+    document.getElementById('pay').textContent = `本を増やす 消費read: ${Math.pow(10, count)}`;
     updateCounter()
   }
 }
@@ -18,7 +18,7 @@ function decrease() {
     const message = document.querySelector("#message");
     message.textContent = count +"冊を同時に読む";
     document.getElementById('scrollAmount').textContent = `所持read: ${parseInt(read)}`;
-    document.getElementById('pay').textContent = `本を増やす　消費read: ${Math.pow(10, count)}`;
+    document.getElementById('pay').textContent = `本を増やす 消費read: ${Math.pow(10, count)}`;
   }
   updateCounter()
 }
@@ -36,6 +36,13 @@ function updateCounter() {
       message3.style.display = 'block';
   } else {
       message3.style.display = 'none';
+  }
+
+  var message4 = document.getElementById('novel4');
+  if (count >= 4) {
+      message4.style.display = 'block';
+  } else {
+      message4.style.display = 'none';
   }
 }
 

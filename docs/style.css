@@ -1,9 +1,10 @@
+
 .novel{
   width: 25px;
   height: 30px;
   font-size: 20px;
   margin-left: 200px;
-  margin-top: 200px;
+  margin-top: 70px;
   text-align: center;
   writing-mode: vertical-rl;
   vertical-align: top;
@@ -20,12 +21,18 @@
   display: none;
 }
 
+.novel4{
+  display: none;
+}
+
 nav{
   position: fixed;
   top: 0;
   left: 0;
-  padding: 20px;
+  padding: 20px 20px 300px 20px;
   background: white;
+  font-family: sans-serif;
+  background: #f3f3f3;
 }
 
 .flexbox{
@@ -35,4 +42,25 @@ nav{
   margin-top: 50px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.button {
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  width: 180px;
+  padding: 10px 25px;
+  color: #393939;
+  /* transition: 0.3s ease-in-out; */
+  font-weight: 600;
+  background: rgb(192, 225, 255);
+}
+
+.button :hover {
+  background: rgb(117,188,255);
+  background: linear-gradient(270deg, rgba(117,188,255,1) 0%, rgba(62,159,252,1) 100%);
 }

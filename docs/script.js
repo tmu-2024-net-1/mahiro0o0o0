@@ -1,10 +1,15 @@
 let count = 1;
 
 function increase() {
-  count = count + 1;
-  const message = document.querySelector("#message");
-  message.textContent = count +"冊を同時に読む";
-  updateCounter()
+  if(read >= Math.pow(10, count)){
+    read -= Math.pow(10, count);
+    count = count + 1;
+    const message = document.querySelector("#message");
+    message.textContent = count +"冊を同時に読む";
+    document.getElementById('scrollAmount').textContent = `所持read: ${parseInt(read)}`;
+    document.getElementById('pay').textContent = `本を増やす　消費read: ${Math.pow(10, count)}`;
+    updateCounter()
+  }
 }
 
 function decrease() {
@@ -12,20 +17,30 @@ function decrease() {
     count = count - 1;
     const message = document.querySelector("#message");
     message.textContent = count +"冊を同時に読む";
+    document.getElementById('scrollAmount').textContent = `所持read: ${parseInt(read)}`;
   }
   updateCounter()
 }
 
 function updateCounter() {
-  var message = document.getElementById('novel2');
+  var message2 = document.getElementById('novel2');
   if (count >= 2) {
-      message.style.display = 'block';
+      message2.style.display = 'block';
   } else {
-      message.style.display = 'none';
+      message2.style.display = 'none';
+  }
+
+  var message3 = document.getElementById('novel3');
+  if (count >= 3) {
+      message3.style.display = 'block';
+  } else {
+      message3.style.display = 'none';
   }
 }
 
 const button = document.querySelector("button");
 button.addEventListener("click", createParagraph);
+
+
 
 // document.querySelector('#text').innerHTML = text.replace(/\n/g, '<br>')

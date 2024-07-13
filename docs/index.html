@@ -21,7 +21,7 @@
         // console.log(`up`);
       }
 
-      set_position = document.documentElement.scrollTop;
+      set_position = Math.max(set_position, document.documentElement.scrollTop);
     });
     
   </script>
@@ -51,7 +51,7 @@
     </div>
   </nav>
 
-  <div class="flexbox">
+  <div class="flexbox" id="flexible">
     <div class="novel">
       羅生門　芥川龍之介　
 

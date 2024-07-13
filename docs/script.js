@@ -44,6 +44,8 @@ function updateCounter() {
   } else {
       message4.style.display = 'none';
   }
+
+
 }
 
 const button = document.querySelector("button");

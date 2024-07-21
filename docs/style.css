@@ -1,5 +1,7 @@
 
 .novel{
+  
+
   width: 25px;
   height: 30px;
   font-size: 20px;
@@ -15,6 +17,9 @@
 
 .novel2{
   display: none;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 
 .novel3{
@@ -30,12 +35,25 @@ nav{
   top: 0;
   left: 0;
   padding: 20px 20px 300px 20px;
-  background: white;
   font-family: sans-serif;
-  background: #f3f3f3;
+  background: #ffffe4;
+}
+
+body{
+  background: url('images/paper.jpg') repeat-y;
+  background-size: cover;
+}
+
+.logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+  height: auto;
 }
 
 .flexbox{
+  
   vertical-align: top;
   width: 1000px;
   display:flex;
@@ -58,10 +76,12 @@ nav{
   color: #393939;
   /* transition: 0.3s ease-in-out; */
   font-weight: 600;
-  background: rgb(192, 225, 255);
+  background-color: #b1eeff;
+  transition: background-color 0.3s;
 }
 
-.button :hover {
-  background: rgb(117,188,255);
-  background: linear-gradient(270deg, rgba(117,188,255,1) 0%, rgba(62,159,252,1) 100%);
+.button:hover {
+  background-color: #49ffea;
+  transform: translateY(-3px); /* 浮き上がる効果 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ボックスシャドウ */
 }

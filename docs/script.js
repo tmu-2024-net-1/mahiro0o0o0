@@ -1,5 +1,6 @@
 let count = 1;
 
+
 function increase() {
   if(read >= Math.pow(10, count)){
     read -= Math.pow(10, count);
@@ -7,7 +8,7 @@ function increase() {
     const message = document.querySelector("#message");
     message.textContent = count +"冊を同時に読む";
     document.getElementById('scrollAmount').textContent = `所持read: ${parseInt(read)}`;
-    document.getElementById('pay').textContent = `本を増やす 消費read: ${Math.pow(10, count)}`;
+    document.getElementById('pay').innerHTML = `本を増やす<br>消費read: ${Math.pow(10, count)}`;
     updateCounter()
   }
 }
@@ -18,7 +19,7 @@ function decrease() {
     const message = document.querySelector("#message");
     message.textContent = count +"冊を同時に読む";
     document.getElementById('scrollAmount').textContent = `所持read: ${parseInt(read)}`;
-    document.getElementById('pay').textContent = `本を増やす 消費read: ${Math.pow(10, count)}`;
+    document.getElementById('pay').innerHTML = `本を増やす<br>消費read: ${Math.pow(10, count)}`;
   }
   updateCounter()
 }
@@ -54,3 +55,4 @@ button.addEventListener("click", createParagraph);
 
 
 // document.querySelector('#text').innerHTML = text.replace(/\n/g, '<br>')
+
